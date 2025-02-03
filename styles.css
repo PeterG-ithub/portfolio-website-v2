@@ -39,11 +39,83 @@ a {
     border-color: #0366d6; /* GitHub blue */
 }
 
+/* About Me Section */
+.about-me {
+    display: flex;
+    align-items: center;
+    gap: 20px; /* Space between left and right sections */
+    padding: 20px;
+    background-color: #f9f9f9; /* Light background */
+    border-radius: 12px; /* Rounded corners */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    max-width: 800px; /* Limit width for better readability */
+    margin: 20px auto; /* Center the section */
+}
+
+/* Headshot */
 .headshot {
-    width: 100px; 
+    width: 100px;
     height: 100px;
-    border-radius: 50%; /* Makes the image circular */
-    border: 3px solid #24292f; /* Optional border */
-    object-fit: cover; /* Ensures the image fills the space */
-    margin: 20px 0; /* Adds spacing around the image */
+    border-radius: 50%;
+    border: 3px solid #0366d6; /* Blue border */
+    object-fit: cover;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Shadow for depth */
+}
+
+/* Right Section */
+.about-me-right {
+    align-self: flex-start;
+}
+
+.about-me-right h1 {
+    font-size: 2rem;
+    color: #24292f; /* Dark text */
+    margin-bottom: 10px;
+}
+
+/* About Me Left Section */
+.about-me-left {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center content horizontally */
+    flex: 1; /* Allow it to grow/shrink */
+    min-width: 120px; /* Prevent shrinking too much */
+}
+
+/* Availability Text */
+.availability {
+    font-size: 14px;
+    color: #000000; /* Blue text */
+    font-weight: bold;
+    text-align: center;
+    margin-top: 10px;
+    white-space: nowrap; /* Prevent text wrapping */
+    display: flex;
+    align-items: center; /* Align circle and text vertically */
+    gap: 8px; /* Space between circle and text */
+}
+
+/* Green Online Indicator */
+.online-indicator {
+    display: inline-block;
+    width: 0.8em; /* Relative to font size */
+    height: 0.8em; /* Relative to font size */
+    background-color: #28a745; /* Green color */
+    border-radius: 50%; /* Make it a circle */
+    box-shadow: 0 0 4px rgba(40, 167, 69, 0.5); /* Subtle glow */
+}
+
+.avail-container {
+    display: flex;
+}
+
+/* Hover Effects */
+.headshot:hover {
+    transform: scale(1.05); /* Slight zoom on hover */
+    transition: transform 0.3s ease;
+}
+
+.about-me:hover {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Deeper shadow on hover */
+    transition: box-shadow 0.3s ease;
 }
