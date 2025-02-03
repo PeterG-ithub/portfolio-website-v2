@@ -1,0 +1,16 @@
+# .gitmessage
+# <type>: <description>
+# 
+# feat:     A new feature
+# fix:      A bug fix
+# docs:     Documentation changes
+# style:    Formatting, missing semicolons, etc.
+# refactor: Code refactoring
+# chore:    Maintenance tasks
+# test:     Adding or updating tests
+# content:  Content updates
+# perf:     Performance improvements
+# ci:       CI/CD updates
+# build:    Build system changes
+# revert:   Reverting a previous commit
+# wip:      Work in progress
