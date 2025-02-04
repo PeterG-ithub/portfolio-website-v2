@@ -1,4 +1,7 @@
 import locationIcon from '/icons/location.png';
+import githubLogo from '/icons/github.svg';
+import linkedInLogo from '/icons/linkedin.png'
+import upworkLogo from '/icons/upwork.png'
 
 // Function to get the current time in HH:MM AM/PM format
 function getCurrentTime() {
@@ -33,6 +36,17 @@ export function renderAboutMe() {
                     <p class="time" id="current-time">
                         ${getCurrentTime()}
                     </p>
+                </div>
+                <div class="link-container">
+                    <a href="https://github.com/PeterG-ithub"> 
+                        <img src="${githubLogo}" alt="GitHub Logo" class="github-icon">
+                    </a>
+                    <a href="https://www.linkedin.com/in/peter-gabradilla/"> 
+                        <img src="${linkedInLogo}" alt="GitHub Logo" class="github-icon">
+                    </a>
+                    <a href="https://www.upwork.com/freelancers/~01232c983ac1a4f353?mp_source=share"> 
+                        <img src="${upworkLogo}" alt="GitHub Logo" class="github-icon">
+                    </a>
                 </div>
             </div>
         </section>
