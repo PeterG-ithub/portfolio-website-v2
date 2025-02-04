@@ -1,3 +1,5 @@
+import locationIcon from '/icons/location.png'
+
 export function renderAboutMe() {
     return `
         <section class="about-me">
@@ -11,12 +13,17 @@ export function renderAboutMe() {
             <div class="about-me-right">
                 <h1>Hi, I am Peter</h1>
                 <div class="avail-container">
+                    <img src="${locationIcon}" class="location-icon" alt="location icon">
                     <p class="location">
                         Rancho Cucamonga, California
                     </p>
-                    <p>8:28 AM</p>
+                    <p class="time">
+                        ${currentTime} AM
+                    </p>
                 </div>
             </div>
         </section>
     `;
 }
+
+const currentTime = '8:29'

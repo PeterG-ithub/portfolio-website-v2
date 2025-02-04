@@ -76,11 +76,26 @@ a {
   align-items: center;
   gap: 20px; /* Space between left and right sections */
   padding: 20px;
-  background-color: #f9f9f9; /* Light background */
-  border-radius: 12px; /* Rounded corners */
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  background-color: #fff;
+  border: 1px solid #e1e4e8;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
   max-width: 800px; /* Limit width for better readability */
   margin: 20px auto; /* Center the section */
+}
+
+.about-me:hover {
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Deeper shadow on hover */
+  transition: box-shadow 0.3s ease;
+}
+
+/* About Me Left Section */
+.about-me-left {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center content horizontally */
+  padding: 0 1rem;
 }
 
 /* Headshot */
@@ -90,40 +105,13 @@ a {
   border-radius: 50%;
   border: 3px solid #28a745;
   object-fit: cover;
-  box-shadow: 0 0 4px rgba(40, 167, 69, 0.5); /* Subtle glow */
+  box-shadow: 0 0 4px rgba(40, 167, 69, 0.5);
 }
 
-/* Right Section */
-.about-me-right {
-  align-self: flex-start;
-}
-
-.about-me-right h1 {
-  font-size: 2rem;
-  color: #24292f; /* Dark text */
-  margin-bottom: 10px;
-}
-
-/* About Me Left Section */
-.about-me-left {
-  display: flex;
-  flex-direction: column;
-  align-items: center; /* Center content horizontally */
-  flex: 1; /* Allow it to grow/shrink */
-  min-width: 120px; /* Prevent shrinking too much */
-}
-
-/* Availability Text */
-.availability {
-  font-size: 14px;
-  color: #000000; /* Blue text */
-  font-weight: bold;
-  text-align: center;
-  margin-top: 10px;
-  white-space: nowrap; /* Prevent text wrapping */
-  display: flex;
-  align-items: center; /* Align circle and text vertically */
-  gap: 8px; /* Space between circle and text */
+/* Hover Effects */
+.headshot:hover {
+  transform: scale(1.05); /* Slight zoom on hover */
+  transition: transform 0.3s ease;
 }
 
 /* Green Online Indicator */
@@ -136,21 +124,51 @@ a {
   box-shadow: 0 0 4px rgba(40, 167, 69, 0.5); /* Subtle glow */
 }
 
+/* Availability Text */
+.availability {
+  font-size: 14px;
+  color: #24292f; 
+  font-weight: bold;
+  text-align: center;
+  margin-top: 10px;
+  white-space: nowrap; /* Prevent text wrapping */
+  display: flex;
+  align-items: center; /* Align circle and text vertically */
+  gap: 8px; /* Space between circle and text */
+}
+
+/* Right Section */
+.about-me-right {
+  align-self: flex-start;
+  height: auto;
+}
+
+.about-me-right h1 {
+  font-size: 2rem;
+  color: #24292f; /* Dark text */
+  margin-top: .5rem;
+  margin-bottom: 0;
+}
+
 .avail-container {
   display: flex;
+  gap: 8px; /* Added to create space between elements */
+  padding-left: .2rem;
+  height: auto;
+  align-items: center; /* Centers items vertically */
+  justify-content: center; /* Centers items horizontally */
 }
 
-/* Hover Effects */
-.headshot:hover {
-  transform: scale(1.05); /* Slight zoom on hover */
-  transition: transform 0.3s ease;
+.avail-container img.location-icon {
+  object-fit: contain; /* Changed to prevent stretching */
+  width: 20px;
+  height: 20px;
 }
 
-.about-me:hover {
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Deeper shadow on hover */
-  transition: box-shadow 0.3s ease;
+.avail-container p {
+  margin-top: 8px;
+  margin-bottom: 8px;
 }
-
 /* Tech Stack Section */
 .tech-stack {
   max-width: 1200px;
