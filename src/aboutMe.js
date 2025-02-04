@@ -38,14 +38,17 @@ export function renderAboutMe() {
                     </p>
                 </div>
                 <div class="link-container">
-                    <a href="https://github.com/PeterG-ithub"> 
+                    <a href="https://github.com/PeterG-ithub" target="_blank">
                         <img src="${githubLogo}" alt="GitHub Logo" class="github-icon">
+                        <span class="tooltip">GitHub</span>
                     </a>
-                    <a href="https://www.linkedin.com/in/peter-gabradilla/"> 
-                        <img src="${linkedInLogo}" alt="GitHub Logo" class="github-icon">
+                    <a href="https://www.linkedin.com/in/peter-gabradilla/" target="_blank">
+                        <img src="${linkedInLogo}" alt="LinkedIn Logo" class="github-icon">
+                        <span class="tooltip">LinkedIn</span>
                     </a>
-                    <a href="https://www.upwork.com/freelancers/~01232c983ac1a4f353?mp_source=share"> 
-                        <img src="${upworkLogo}" alt="GitHub Logo" class="github-icon">
+                    <a href="https://www.upwork.com/freelancers/~01232c983ac1a4f353?mp_source=share" target="_blank">
+                        <img src="${upworkLogo}" alt="Upwork Logo" class="github-icon">
+                        <span class="tooltip">Upwork</span>
                     </a>
                 </div>
             </div>

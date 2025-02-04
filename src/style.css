@@ -138,9 +138,45 @@ a {
   align-items: center;
 }
 
+.link-container a {
+  position: relative;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+}
+
 .link-container img {
   width: 24px;
   height: 24px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.link-container a:hover img {
+  transform: scale(1.1); /* Slight zoom on hover */
+}
+
+/* Tooltip Styling */
+.tooltip {
+  position: absolute;
+  bottom: -30px; /* Adjust spacing */
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 5px 8px;
+  border-radius: 5px;
+  font-size: 12px;
+  white-space: nowrap;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+/* Show tooltip on hover */
+.link-container a:hover .tooltip {
+  opacity: 1;
+  visibility: visible;
 }
 
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~Tech Stack Section~~~~~~~~~~~~~~~~~~~~~~~~~ */
