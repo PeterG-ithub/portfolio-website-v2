@@ -5,18 +5,56 @@ const projects = [
     {
         title: "Ant Simulation",
         image: "/images/ant-simulation-thumbnail.png",
+        background: "",
         description: "A simulation of ant behavior using swarm intelligence algorithms.",
         tech: ["C++", "SFML", "Algorithms"],
         github: "https://github.com/PeterG-ithub/ant-simulation",
-        demo: "https://peterg-ithub.github.io/ant-simulation", // Optional
+        demo: "https://peterg-ithub.github.io/ant-simulation",
     },
     {
         title: "SociWave",
         image: "/images/sociwave-thumbnail.png",
+        background: "",
         description: "A social media analytics dashboard built with React and Node.js.",
         tech: ["React", "Node.js", "MongoDB"],
         github: "https://github.com/PeterG-ithub/sociwave",
-        demo: "https://sociwave.vercel.app", // Optional
+        demo: "",
+    },
+    {
+        title: "Work In Progress",
+        image: "/icons/wip.png",
+        background: "#002e6d",
+        description: "This Project is a placeholder ",
+        tech: ["React", "Node.js", "MongoDB"],
+        github: "",
+        demo: "",
+    },
+    {
+        title: "Work In Progress",
+        image: "/icons/wip.png",
+        background: "#002e6d",
+        description: "This Project is a placeholder ",
+        tech: ["React", "Node.js", "MongoDB"],
+        github: "",
+        demo: "",
+    },
+    {
+        title: "Work In Progress",
+        image: "/icons/wip.png",
+        background: "#002e6d",
+        description: "This Project is a placeholder ",
+        tech: ["React", "Node.js", "MongoDB"],
+        github: "",
+        demo: "",
+    },
+    {
+        title: "Work In Progress",
+        image: "/icons/wip.png",
+        background: "#002e6d",
+        description: "This Project is a placeholder ",
+        tech: ["React", "Node.js", "MongoDB"],
+        github: "",
+        demo: "",
     },
     // Add more projects here
 ];
@@ -34,21 +72,23 @@ function createProjectCard(project) {
     // Buttons
     const buttons = `
         <a href="${project.github}" class="github" target="_blank">
-            <img src="/icons/github-icon.svg" alt="GitHub" width="16">
+            <img src="/icons/github.svg" alt="GitHub" width="16">
             GitHub
         </a>
         ${
             project.demo
                 ? `<a href="${project.demo}" class="demo" target="_blank">
-                    <img src="/icons/live-demo-icon.svg" alt="Live Demo" width="16">
-                    Live Demo
+                    <img src="/icons/web.png" alt="Website" width="16" class="white-icon">
+                    Demo
                 </a>`
                 : ""
         }
     `;
 
     card.innerHTML = `
-        <img src="${project.image}" alt="${project.title}">
+        <div class="img-container" style="background-color: ${project.background}">
+            <img src="${project.image}" alt="${project.title}">
+        </div>
         <div class="content">
             <h3>${project.title}</h3>
             <p>${project.description}</p>
