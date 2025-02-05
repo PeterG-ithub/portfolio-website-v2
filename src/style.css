@@ -35,7 +35,7 @@ a {
 .about-me {
   display: flex;
   align-items: center;
-  gap: 20px; /* Space between left and right sections */
+  gap: 20px;
   padding: 20px;
   background-color: #fff;
   border: 1px solid #e1e4e8;
@@ -44,6 +44,13 @@ a {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   max-width: 800px; /* Limit width for better readability */
   margin: 20px auto; /* Center the section */
+}
+
+@media (max-width: 625px) {
+  .about-me {
+    flex-direction: column;
+    justify-content: center;
+  }
 }
 
 .about-me:hover {
@@ -55,6 +62,7 @@ a {
 .about-me-left {
   display: flex;
   flex-direction: column;
+  gap: 10px;
   align-items: center; /* Center content horizontally */
   padding: 0 1rem;
 }
@@ -100,20 +108,28 @@ a {
 
 /* Right Section */
 .about-me-right {
-  align-self: flex-start;
   height: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.about-me-right .header {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
 }
 
 .about-me-right h1 {
   font-size: 2rem;
   color: #24292f; /* Dark text */
-  margin-top: .5rem;
+  margin-top: .2rem;
   margin-bottom: 0;
+  margin-right: 1rem;
 }
 
 .avail-container {
   display: flex;
-  gap: 8px; /* Added to create space between elements */
+  gap: 5px; /* Added to create space between elements */
   padding-left: .2rem;
   height: auto;
   align-items: center; /* Centers items vertically */
@@ -122,13 +138,23 @@ a {
 
 .avail-container img.location-icon {
   object-fit: contain; /* Changed to prevent stretching */
-  width: 20px;
-  height: 20px;
+  width: 18px;
+  height: 18px;
 }
 
 .avail-container p {
-  margin-top: 8px;
-  margin-bottom: 8px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+.avail-container .time {
+  padding-left: .5rem;
+  font-weight: 500;
+}
+
+.about-me-right .description .text {
+  margin-top: .7rem;
+  margin-bottom: 0;
 }
 
 .link-container {

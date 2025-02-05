@@ -21,22 +21,7 @@ export function renderAboutMe() {
         <section class="about-me">
             <div class="about-me-left">
                 <img src="images/doggo.png" alt="Your Name" class="headshot">
-                <p class="availability">
-                    <span class="online-indicator"></span> <!-- Green circle -->
-                    Available to work
-                </p>
-            </div>
-            <div class="about-me-right">
-                <h1>Hi, I am Peter</h1>
-                <div class="avail-container">
-                    <img src="${locationIcon}" class="location-icon" alt="location icon">
-                    <p class="location">
-                        Rancho Cucamonga, California
-                    </p>
-                    <p class="time" id="current-time">
-                        ${getCurrentTime()}
-                    </p>
-                </div>
+                
                 <div class="link-container">
                     <a href="https://github.com/PeterG-ithub" target="_blank">
                         <img src="${githubLogo}" alt="GitHub Logo" class="github-icon">
@@ -51,6 +36,28 @@ export function renderAboutMe() {
                         <span class="tooltip">Upwork</span>
                     </a>
                 </div>
+            </div>
+            <div class="about-me-right">
+                <div class="header">
+                    <h1>Hi, I am Peter</h1>
+                    <div class="avail-container">
+                        <img src="${locationIcon}" class="location-icon" alt="location icon">
+                        <p class="location">
+                            Rancho Cucamonga, California
+                        </p>
+                        <p class="time" id="current-time">
+                            ${getCurrentTime()}
+                        </p>
+                    </div>
+                </div>
+                <div class="description">
+                    <p class="text">
+                        I am a developer and tinkerer passionate about building tools with code. 
+                        I build apps, simulations, and AI experiments to understand how things work. 
+                        Currently exploring AI-driven solutions.
+                    </p>
+                </div>
+                
             </div>
         </section>
     `;
