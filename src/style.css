@@ -196,18 +196,44 @@ a {
 /* Tech Cards Container */
 .tech-cards {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-columns: repeat(1, 1fr); /* Ensures 1 column for very small screens */
   gap: 20px; /* Space between cards */
   padding: 20px;
 }
 
+
+/* Adjust for medium screens */
+@media (min-width: 625px) {
+  .tech-cards {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns */
+  }
+}
+
+/* Adjust for large screens */
+@media (min-width: 1024px) {
+  .tech-cards {
+    grid-template-columns: repeat(3, 1fr); /* 3 columns */
+  }
+}
+
+/* Adjust for extra-large screens */
+@media (min-width: 1200px) {
+  .tech-cards {
+    grid-template-columns: repeat(4, 1fr); /* Max 4 columns */
+  }
+}
+
 /* Individual Tech Card */
 .tech-card {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  height: 58px;
   background-color: #fff;
   border: 1px solid #e1e4e8;
   border-radius: 8px;
-  padding: 20px;
-  text-align: center;
+  padding: 10px;
+  text-align: left;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
@@ -217,20 +243,33 @@ a {
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }
 
-.tech-card img {
-  width: 50px; /* Adjust icon size */
-  height: 50px;
-  margin-bottom: 15px;
+.tech-card .img-container {
+  width: 56px;
+  height: 56px;
+  min-width: 56px; /* Prevent shrinking */
+  min-height: 56px; /* Prevent shrinking */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0.6rem;
+  flex-shrink: 0; /* Ensures it doesn't shrink in a flex container */
 }
 
-.tech-card h3 {
+.tech-card img {
+  width: 32px; /* Adjust icon size */
+  height: 32px;
+}
+
+.tech-card h4 {
   font-size: 1.25rem;
-  margin-bottom: 10px;
+  font-weight: 500;
+  margin: 0px;
   color: #24292f;
 }
 
 .tech-card p {
   font-size: 0.9rem;
+  margin: 0px;
   color: #555;
 }
 
