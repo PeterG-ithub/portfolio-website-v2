@@ -58,6 +58,13 @@ const techStack = [
         description: "Work in Progress",
         size: "32px",  // Add size if needed
     },
+    {
+        name: "Kotlin",
+        icon: "/icons/kotlin.svg",
+        background: "#1c1733",
+        description: "Work in Progress",
+        size: "32px",  // Add size if needed
+    },
 ];
 
 // Function to create a tech card
